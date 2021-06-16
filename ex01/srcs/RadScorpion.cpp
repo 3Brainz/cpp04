@@ -7,7 +7,6 @@ RadScorpion::RadScorpion() : Enemy(80, "RadScorpion")
 
 RadScorpion::~RadScorpion()
 {
-	std::cout << "* SPROTCH *" << std::endl;
 }
 
 RadScorpion::RadScorpion(RadScorpion const &toCopy) : Enemy(toCopy)
@@ -24,4 +23,17 @@ std::ostream & operator << (std::ostream & stream, const RadScorpion &radScorpio
 {
 	stream << "BAGJAERAEKFEAGJM" << "SAFGDSFA" << radScorpion.getHP() << std::endl;
 	return (stream);
+}
+
+void	RadScorpion::takeDamage(int dmg)
+{
+	if (_hp == 0)
+		return ;
+	if (_hp - dmg <= 0)
+	{
+		_hp = 0;
+		std::cout << "* SPROTCH *" << std::endl;
+	}
+	else
+		_hp = _hp - dmg;
 }

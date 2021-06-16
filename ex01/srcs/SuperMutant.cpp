@@ -7,7 +7,6 @@ SuperMutant::SuperMutant() : Enemy(170, "Super Mutant")
 
 SuperMutant::~SuperMutant()
 {
-	std::cout << "Aaargh..." << std::endl;
 }
 
 SuperMutant::SuperMutant(SuperMutant const &toCopy) : Enemy(toCopy)
@@ -37,7 +36,11 @@ void		SuperMutant::takeDamage(int dmg)
 	if (_hp == 0)
 		return ;
 	if (_hp - dmg <= 0)
+	{
+	
+		std::cout << "Aaargh..." << std::endl;
 		_hp = 0;
+	}
 	else
 		_hp = _hp - dmg;
 }

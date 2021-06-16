@@ -13,7 +13,6 @@ AWeapon::AWeapon(std::string const & name, int apcost, int damage) : _name(name)
 AWeapon::~AWeapon()
 {
 	// std::cout << _name << " has been dismissed" << std::endl;
-	delete this;
 }
 
 AWeapon::AWeapon(AWeapon const &toCopy) : _name(toCopy._name), _atkDamage(toCopy._atkDamage), _APCost(toCopy._APCost)

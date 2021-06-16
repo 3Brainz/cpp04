@@ -7,7 +7,7 @@ PowerFist::PowerFist() : AWeapon("Power fist", 8, 50)
 
 PowerFist::~PowerFist()
 {
-	std::cout << this->getName() << "dismissed" << std::endl;
+	// std::cout << this->getName() << "dismissed" << std::endl;
 }
 
 PowerFist::PowerFist(PowerFist const &toCopy) : AWeapon(toCopy)

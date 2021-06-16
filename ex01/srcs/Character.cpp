@@ -12,7 +12,6 @@ Character::Character(std::string const & name) : _name(name), _AP(40), _weapon(N
 
 Character::~Character()
 {
-	delete this;
 }
 
 Character::Character(Character const &toCopy) : _name(toCopy._name), _AP(toCopy._AP)
@@ -77,11 +76,13 @@ void			Character::equip(AWeapon *weapon)
 
 void			Character::attack(Enemy *enemy)
 {
-	if (!_weapon)
+	if (!_weapon || !enemy)
 		return ;
 	if (_AP >= _weapon->getAPCost())
 	{
+		std::cout << _name << " attacks " << enemy->getType() << " with a " << _weapon->getName() << std::endl;
 		enemy->takeDamage(_weapon->getDamage());
+		_weapon->attack();
 		_AP -= _weapon->getAPCost();
 	}
 }

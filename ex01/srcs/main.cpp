@@ -24,5 +24,9 @@ int main ()
 	std::cout << *me;
 	me->attack(b);
 	std::cout << *me;
+	delete me;
+	delete b;
+	delete pr;
+	delete pf;
 	return 0;
 }

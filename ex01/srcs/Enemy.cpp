@@ -13,7 +13,6 @@ Enemy::Enemy(int hp, std::string type) : _hp(hp), _type(type)
 Enemy::~Enemy()
 {
 	// std::cout << "Enemy destroyed" << std::endl;
-	delete this;
 }
 
 Enemy::Enemy(Enemy const &toCopy) : _hp(toCopy._hp), _type(toCopy._type) 

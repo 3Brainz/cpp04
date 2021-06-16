@@ -8,6 +8,7 @@ PlasmaRifle::PlasmaRifle() : AWeapon("Plasma rifle", 5, 21)
 PlasmaRifle::~PlasmaRifle()
 {
 	// std::cout << this->getName() << "dismissed" << std::endl;
+	;
 }
 
 PlasmaRifle::PlasmaRifle(PlasmaRifle const &toCopy) : AWeapon(toCopy)

@@ -10,7 +10,7 @@ public:
 	RadScorpion(RadScorpion const &toCopy);
 	~RadScorpion();
 	RadScorpion &	operator = (const RadScorpion & toCopy);
-
+	void	takeDamage(int dmg);
 protected:
 
 private:
