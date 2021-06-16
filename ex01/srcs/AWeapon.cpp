@@ -12,7 +12,8 @@ AWeapon::AWeapon(std::string const & name, int apcost, int damage) : _name(name)
 
 AWeapon::~AWeapon()
 {
-	std::cout << _name << " has been dismissed" << std::endl;
+	// std::cout << _name << " has been dismissed" << std::endl;
+	delete this;
 }
 
 AWeapon::AWeapon(AWeapon const &toCopy) : _name(toCopy._name), _atkDamage(toCopy._atkDamage), _APCost(toCopy._APCost)
@@ -42,6 +43,15 @@ std::ostream & operator << (std::ostream & stream, const AWeapon &weapon)
 std::string	const	AWeapon::getName() const
 {
 	return (_name);
+}
+
+int 				AWeapon::getAPCost(void) const
+{
+	return (_APCost);
+}
+int 				AWeapon::getDamage(void) const
+{
+	return (_atkDamage);
 }
 
 /*funcs*/

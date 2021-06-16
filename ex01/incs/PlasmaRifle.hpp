@@ -11,7 +11,7 @@ public:
 	PlasmaRifle &	operator = (const PlasmaRifle & toCopy);
 	/*getters*/
 	/*funcs*/
-	void	attack() const = 0;
+	void	attack() const;
 protected:
 
 private:

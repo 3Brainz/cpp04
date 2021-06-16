@@ -26,7 +26,7 @@ std::ostream & operator << (std::ostream & stream, const PlasmaRifle &plasmaRifl
 	return (stream);
 }
 
-void	attack()
+void	PlasmaRifle::attack() const
 {
 	std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }

@@ -27,7 +27,7 @@ std::ostream & operator << (std::ostream & stream, const PowerFist &powerFist)
 	return (stream);
 }
 
-void	attack()
+void	PowerFist::attack() const
 {
 	std::cout << "* pschhh... SBAM! *" << std::endl;
 }
