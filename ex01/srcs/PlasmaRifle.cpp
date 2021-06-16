@@ -1,32 +1,32 @@
 #include <PlasmaRifle.hpp>
 
-PlasmaRifle::PlasmaRifle()
+PlasmaRifle::PlasmaRifle() : AWeapon("Plasma rifle", 5, 21)
 {
-	std::cout << "PlasmaRifle created" << std::endl
+	// std::cout << "PlasmaRifle created" << std::endl;
 }
-
-//PlasmaRifle::PlasmaRifle()
-//{
-//	std::cout << PlasmaRifle created << std::endl
-//}
 
 PlasmaRifle::~PlasmaRifle()
 {
+	// std::cout << this->getName() << "dismissed" << std::endl;
 }
 
-PlasmaRifle::PlasmaRifle(PlasmaRifle const &toCopy)
+PlasmaRifle::PlasmaRifle(PlasmaRifle const &toCopy) : AWeapon(toCopy)
 {
 }
 
 PlasmaRifle &	PlasmaRifle::operator = (const PlasmaRifle & toCopy)
 {
-	if (this != &toCopy)
-	{
-	}
+	AWeapon::operator = (toCopy);
 	return (*this);
 }
 
-std::ostream & operator << (std::ostream & stream, const PlasmaRifle &PlasmaRifle)
+std::ostream & operator << (std::ostream & stream, const PlasmaRifle &plasmaRifle)
 {
+	stream << "hi i'm " << plasmaRifle.getName() << " the plasma rifle" << std::endl;
 	return (stream);
+}
+
+void	attack()
+{
+	std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }

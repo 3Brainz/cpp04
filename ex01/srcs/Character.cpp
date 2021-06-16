@@ -2,12 +2,12 @@
 
 Character::Character()
 {
-	std::cout << "Character created" << std::endl
+	std::cout << "Character created" << std::endl;
 }
 
 //Character::Character()
 //{
-//	std::cout << Character created << std::endl
+//	std::cout << Character created << std::endl;
 //}
 
 Character::~Character()

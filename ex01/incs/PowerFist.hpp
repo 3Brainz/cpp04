@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
+#include <AWeapon.hpp>
 
-class PowerFist
+class PowerFist : public AWeapon
 {
 public:
 	PowerFist();
@@ -9,7 +10,9 @@ public:
 	PowerFist(PowerFist const &toCopy);
 	~PowerFist();
 	PowerFist &	operator = (const PowerFist & toCopy);
-
+	/*getters*/
+	/*funcs*/
+	void	attack() const = 0;
 protected:
 
 private:

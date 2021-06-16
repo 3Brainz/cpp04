@@ -16,11 +16,10 @@ public:
 	/*functions*/
 	virtual		void	attack() const = 0;
 protected:
-
-private:
 	std::string _name;
 	int			_atkDamage;
 	int			_APCost;
+private:
 };
 
 std::ostream & operator << (std::ostream & stream, const AWeapon &weapon);

@@ -5,13 +5,19 @@ class Enemy
 {
 public:
 	Enemy();
-	//Enemy();
+	Enemy(int hp, std::string type);
 	Enemy(Enemy const &toCopy);
 	~Enemy();
 	Enemy &	operator = (const Enemy & toCopy);
+	/*getters*/
+	std::string const getType() const;
+    int getHP() const;
+	/*funcs*/
+	virtual	void 	takeDamage(int dmg);
 
 protected:
-
+	int				_hp;
+	std::string		_type;
 private:
 
 };

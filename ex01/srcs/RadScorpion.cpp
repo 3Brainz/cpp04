@@ -1,32 +1,27 @@
 #include <RadScorpion.hpp>
 
-RadScorpion::RadScorpion()
+RadScorpion::RadScorpion() : Enemy(80, "RadScorpion")
 {
-	std::cout << "RadScorpion created" << std::endl
+	std::cout << "* click click click *" << std::endl;
 }
-
-//RadScorpion::RadScorpion()
-//{
-//	std::cout << RadScorpion created << std::endl
-//}
 
 RadScorpion::~RadScorpion()
 {
+	std::cout << "* SPROTCH *" << std::endl;
 }
 
-RadScorpion::RadScorpion(RadScorpion const &toCopy)
+RadScorpion::RadScorpion(RadScorpion const &toCopy) : Enemy(toCopy)
 {
 }
 
 RadScorpion &	RadScorpion::operator = (const RadScorpion & toCopy)
 {
-	if (this != &toCopy)
-	{
-	}
+	Enemy::operator = (toCopy);
 	return (*this);
 }
 
-std::ostream & operator << (std::ostream & stream, const RadScorpion &RadScorpion)
+std::ostream & operator << (std::ostream & stream, const RadScorpion &radScorpion)
 {
+	stream << "BAGJAERAEKFEAGJM" << "SAFGDSFA" << radScorpion.getHP() << std::endl;
 	return (stream);
 }

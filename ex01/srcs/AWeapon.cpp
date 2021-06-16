@@ -2,12 +2,12 @@
 
 AWeapon::AWeapon() : _name("arma"), _atkDamage(0), _APCost(0)
 {
-	std::cout << "StdWeapon created" << std::endl;
+	// std::cout << "StdWeapon created" << std::endl;
 }
 
 AWeapon::AWeapon(std::string const & name, int apcost, int damage) : _name(name), _atkDamage(damage), _APCost(apcost)
 {
-	std::cout << _name << " weapon ready to deal " << _atkDamage << "damage" << std::endl; 
+	// std::cout << _name << " weapon ready to deal " << _atkDamage << "damage" << std::endl; 
 }
 
 AWeapon::~AWeapon()
@@ -17,7 +17,7 @@ AWeapon::~AWeapon()
 
 AWeapon::AWeapon(AWeapon const &toCopy) : _name(toCopy._name), _atkDamage(toCopy._atkDamage), _APCost(toCopy._APCost)
 {
-	std::cout << _name << " copied with success" << std::endl;
+	// std::cout << _name << " copied with success" << std::endl;
 }
 
 AWeapon &	AWeapon::operator = (const AWeapon & toCopy)
