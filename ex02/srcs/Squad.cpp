@@ -11,8 +11,8 @@ Squad::~Squad()
 
 Squad::Squad(Squad const &toCopy) : _count(toCopy._count)
 {
-	_squad = new ISpaceMarine*[toCopy._count];
 	deleteSquad();
+	_squad = new ISpaceMarine*[toCopy._count];
 	if (!toCopy._squad)
 		return ;
 	for(int i = 0; i < toCopy._count; i++)

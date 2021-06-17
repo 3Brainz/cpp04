@@ -1,20 +1,13 @@
 #pragma once
 #include <iostream>
+#include <AMateria.hpp>
 
 class ICharacter
 {
-public:
-	ICharacter();
-	//ICharacter();
-	ICharacter(ICharacter const &toCopy);
-	~ICharacter();
-	ICharacter &	operator = (const ICharacter & toCopy);
-	/*getters*/
-	std::string & getName() const;
-protected:
-
-private:
-
+	public:
+		virtual ~ICharacter() {}
+		virtual std::string const & getName() const = 0;
+		virtual void equip(AMateria* m) = 0;
+		virtual void unequip(int idx) = 0;
+		virtual void use(int idx, ICharacter& target) = 0;
 };
-
-std::ostream & operator << (std::ostream & stream, const ICharacter &ICharacter);

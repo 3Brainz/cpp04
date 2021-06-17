@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
+#include <ICharacter.hpp>
 
-class Character
+class Character : public ICharacter
 {
 public:
 	Character();
@@ -13,6 +14,7 @@ public:
 protected:
 
 private:
+	AMateria	_inventory[4];
 
 };
 
