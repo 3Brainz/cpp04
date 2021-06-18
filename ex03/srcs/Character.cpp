@@ -48,8 +48,9 @@ Character &	Character::operator = (const Character & toCopy)
 	return (*this);
 }
 
-std::ostream & operator << (std::ostream & stream, const Character &Character)
+std::ostream & operator << (std::ostream & stream, const Character &character)
 {
+	stream << "t]his is an easter egg from " << character.getName() << std::endl;
 	return (stream);
 }
 
@@ -78,14 +79,17 @@ void			Character::invCleaner(void)
 
 void 	Character::equip(AMateria* m)
 {
-	if (_invCount < 4);
+	if (_invCount < 4)
 	{
 		for (int i = 0; i < 4; i +=1 )
 		{
 			if (_inventory[i] == 0)
+			{
 				_inventory[i] = m;
+				_invCount += 1;
+				return ;
+			}
 		}
-		_invCount += 1;
 	}
 }
 

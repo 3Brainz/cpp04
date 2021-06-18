@@ -6,6 +6,7 @@ Ice::Ice() : AMateria("ice")
 
 Ice::~Ice()
 {
+	// delete (this);
 }
 
 Ice::Ice(Ice const &toCopy) : AMateria(toCopy)

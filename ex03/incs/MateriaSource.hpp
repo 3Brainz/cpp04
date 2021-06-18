@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
+#include <IMateriaSource.hpp>
 
-class MateriaSource
+class MateriaSource : public IMateriaSource
 {
 public:
 	MateriaSource();
@@ -9,11 +10,14 @@ public:
 	MateriaSource(MateriaSource const &toCopy);
 	~MateriaSource();
 	MateriaSource &	operator = (const MateriaSource & toCopy);
-
+	/*funcs*/
+	void learnMateria(AMateria* materia);
+	AMateria* createMateria(std::string const & type);
+	void	storedZero();
+	void	storedCleaner();
 protected:
 
 private:
-
+	AMateria	*_stored[4];
 };
 
-std::ostream & operator << (std::ostream & stream, const MateriaSource &MateriaSource);

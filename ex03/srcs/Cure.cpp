@@ -1,8 +1,7 @@
 #include <Cure.hpp>
 
-Cure::Cure()
+Cure::Cure() : AMateria("cure")
 {
-	std::cout << "Cure created" << std::endl;
 }
 
 //Cure::Cure()
@@ -14,19 +13,25 @@ Cure::~Cure()
 {
 }
 
-Cure::Cure(Cure const &toCopy)
+Cure::Cure(Cure const &toCopy) : AMateria(toCopy)
 {
 }
 
 Cure &	Cure::operator = (const Cure & toCopy)
 {
-	if (this != &toCopy)
-	{
-	}
+	AMateria::operator=(toCopy);
 	return (*this);
 }
 
-std::ostream & operator << (std::ostream & stream, const Cure &Cure)
+AMateria*		Cure::clone() const
 {
-	return (stream);
+	Cure		*ret;
+	ret = new Cure(*this);
+	return (ret);
+}
+
+void			Cure::use(ICharacter& target)
+{
+	AMateria::use(target);
+	std::cout << "* heals " <<target.getName() << "'s wounds *" << std::endl;
 }

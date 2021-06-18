@@ -1,7 +1,8 @@
 #pragma once
 #include <iostream>
+#include <AMateria.hpp>
 
-class Cure
+class Cure : public AMateria
 {
 public:
 	Cure();
@@ -9,11 +10,11 @@ public:
 	Cure(Cure const &toCopy);
 	~Cure();
 	Cure &	operator = (const Cure & toCopy);
-
+	/*funcs*/
+	AMateria*		clone() const;
+	void			use(ICharacter& target);
 protected:
 
 private:
 
 };
-
-std::ostream & operator << (std::ostream & stream, const Cure &Cure);

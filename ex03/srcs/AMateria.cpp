@@ -12,6 +12,7 @@ AMateria::AMateria(std::string const & type) :
 
 AMateria::~AMateria()
 {
+	// delete this;
 }
 
 AMateria::AMateria(AMateria const &toCopy) :

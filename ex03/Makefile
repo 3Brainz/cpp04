@@ -16,8 +16,10 @@ INCDIR = 		./incs
 
 #files
 FILES =			AMateria.cpp \
+				Cure.cpp \
 				Ice.cpp \
 				Character.cpp \
+				MateriaSource.cpp \
 				main.cpp
 
 #Srcs
