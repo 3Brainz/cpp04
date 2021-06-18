@@ -17,6 +17,7 @@ INCDIR = 		./incs
 #files
 FILES =			AMateria.cpp \
 				Ice.cpp \
+				Character.cpp \
 				main.cpp
 
 #Srcs

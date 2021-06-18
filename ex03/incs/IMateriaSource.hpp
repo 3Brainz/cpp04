@@ -1,19 +1,11 @@
 #pragma once
 #include <iostream>
+#include <AMateria.hpp>
 
 class IMateriaSource
 {
-public:
-	IMateriaSource();
-	//IMateriaSource();
-	IMateriaSource(IMateriaSource const &toCopy);
-	~IMateriaSource();
-	IMateriaSource &	operator = (const IMateriaSource & toCopy);
-
-protected:
-
-private:
-
+	public:
+		virtual ~IMateriaSource() {}
+		virtual void learnMateria(AMateria*) = 0;
+		virtual AMateria* createMateria(std::string const & type) = 0;
 };
-
-std::ostream & operator << (std::ostream & stream, const IMateriaSource &IMateriaSource);
